@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 
-moongose.connect('mongodb+srv://onmistack:onmistack@rocketseat-week-9-lgavj.mongodb.net/admin?retryWrites=true&w=majority', {
+moongose.connect('mongodb+srv://onmistack:onmistack@rocketseat-week-9-lgavj.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
