@@ -4,6 +4,12 @@
     "slug": "mobile",
     "privacy": "public",
     "sdkVersion": "35.0.0",
+    
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#ffffff"
+    },
+    
     "platforms": [
       "ios",
       "android",
