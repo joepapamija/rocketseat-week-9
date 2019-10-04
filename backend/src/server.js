@@ -3,8 +3,16 @@ const moongose = require('mongoose');
 const routes = require('./routes');
 const cors = require('cors');
 const path = require('path');
+const socketio = require('socketio.io');
+const http = require('http');
 
 const app = express();
+const server = http(server);
+const io = socketio(server);
+
+io.on('conection', socket => {
+    console.log('user conected', socket.id);
+});
 
 moongose.connect('mongodb+srv://onmistack:onmistack@rocketseat-week-9-lgavj.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
@@ -17,4 +25,4 @@ app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
-app.listen(3333);
+app.server(3333);
